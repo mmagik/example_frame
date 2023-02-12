@@ -1,0 +1,103 @@
+
+.layer-audio  {
+    position: absolute;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 100%;
+    left: 3px;
+    right: 3px;
+    
+    z-index: 10;
+
+    animation-duration: .5s;
+    animation-name: slide-y-gentle;
+    animation-timing-function: cubic-bezier(0.05, 1.22, 0.065, 1.4);
+    animation-fill-mode: both;
+}
+
+
+.layer-audio-main {
+    top: 25px;
+    z-index: 3;
+    background-color: transparent;
+}
+
+
+.layer-audio-volume {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    height: 16px;
+    color: #fff;
+    background-color: rgb(15, 15, 15);
+    text-align: center;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Open Sans", "PT Sans", Roboto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.layer-audio-handler {
+    position: absolute;
+    height: 16px;
+    left: 2px;
+    right: 2px;
+    margin: 0 auto;
+    cursor: ns-resize;
+}
+.layer-audio-handler:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #a0fbfb;
+    animation-duration: .8s;
+    animation-name: slide-in-y-long;
+    animation-timing-function: cubic-bezier(0.08, 1.12, 0.065, 1.15);
+    animation-fill-mode: both;
+}
+
+.layer-audio-handler:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    transform: scaleY(0);
+    background-color: rgb(32, 245, 199);
+    transition: transform .3s cubic-bezier(0.27, 1.2, 0.065, 2);
+}
+.layer-audio-handler:hover:before {
+    background-color: #bfffff;
+
+}
+.layer-audio-handler:active:before {
+    background-color: rgb(245, 32, 227);
+}
+.layer-audio-handler:active:after {
+    transform: scaleY(1);
+}
+
+
+.layer-audio-highlight {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #52dc9c4f;
+    background-image: url("data:image/svg+xml,%3Csvg width='5' height='5' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2352dc9c4f' fill-rule='evenodd'%3E%3Cpath d='M0 10L10 0H5L0 5M10 10V5L5 10'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: -1;
+}
+

@@ -1,0 +1,8 @@
+
+.tl-image-preview {
+    background-size: auto 60px;
+    background-position: center center;
+    background-repeat: repeat-x;
+    height: 100%;
+    position: relative;
+}

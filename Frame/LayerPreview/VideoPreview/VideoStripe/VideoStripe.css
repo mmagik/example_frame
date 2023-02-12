@@ -1,0 +1,27 @@
+
+.video-stripe {
+    overflow: hidden;
+}
+
+.video-stripe > canvas {
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.video-stripe-wrapper {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+.video-stripe-loading {
+    position: absolute;
+    left: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    text-transform: uppercase;
+}
